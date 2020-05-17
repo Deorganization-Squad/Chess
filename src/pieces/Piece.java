@@ -74,7 +74,16 @@ public abstract class Piece {
     */
     static void findPos(){
 
+    }
 
+
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public void setMortality(Mortality mortality) {
+        this.mortality = mortality;
     }
 
     public Mortality getMortality() {
