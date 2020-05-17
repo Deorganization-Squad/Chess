@@ -1,18 +1,20 @@
-package Piece;
-
-import java.io.File;
-import java.util.Scanner;
-import java.io.IOException;
-import java.io.FileNotFoundException;
+package pieces;
 
 public abstract class Piece {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("enter a position code(11-88)");
-        position(input.nextInt());
+    public Color color;
+    public Mortality mortality;
+
+    public enum Mortality{
+        DEAD,
+        ALIVE
+    }
+    public enum Color{
+        WHITE,
+        BLACK
     }
 
-    static String position(int x) {
+
+    public static String positionconv(int x) {
         int xten = x / 10;
 
         String pos = "";
@@ -27,7 +29,7 @@ public abstract class Piece {
             case 7: pos = "G";
             case 8: pos = "H";
         } */
-
+        System.out.println("pieces.positionconv");
         if (xten == 1) {
             pos = "A";
         } else if (xten == 2) {
@@ -51,11 +53,12 @@ public abstract class Piece {
         System.out.println(posint);
         return (posint);
     }
-    static int move(int x){
+    public static int move(int x){
         int y = 0;  //TODO finish this method
         return(y);
     }
-    static void createPosFile(){
+
+   /*static void createPosFile(){
         try{
             File posFile = new File("PiecesPos.txt");
             if(posFile.createNewFile()){
@@ -68,8 +71,17 @@ public abstract class Piece {
             e.printStackTrace();
         }
     }
+    */
     static void findPos(){
 
 
+    }
+
+    public Mortality getMortality() {
+        return mortality;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }
