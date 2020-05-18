@@ -12,7 +12,7 @@ class PieceTest {
 
     @org.junit.jupiter.api.Test
     void positionTest() {
-        assertEquals("H",Piece.positionconv(81));
+        assertEquals("H1",Piece.positionconv(81));
     }
 
     @org.junit.jupiter.api.Test
