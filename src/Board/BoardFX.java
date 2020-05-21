@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class BoardFX extends Application {
 
     public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class BoardFX extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("BoardInfo.fxml"));
 
         primaryStage.setTitle("Title of window");
