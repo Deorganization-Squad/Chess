@@ -8,17 +8,16 @@ public abstract class Piece {
         DEAD,
         ALIVE
     }
+
     public enum Color{
         WHITE,
         BLACK
     }
 
-
+    public int[][] b = new int[8][8];
     public static String positionconv(int x) {
-        int xten = x / 10;
-
+        int xten = x/ 10;
         String pos = "";
-
         /*switch(x/10){
             case 1: pos = "A";
             case 2: pos = "B";
@@ -29,7 +28,6 @@ public abstract class Piece {
             case 7: pos = "G";
             case 8: pos = "H";
         } */
-        System.out.println("pieces.positionconv");
         if (xten == 1) {
             pos = "A";
         } else if (xten == 2) {
@@ -53,6 +51,7 @@ public abstract class Piece {
         System.out.println(posint);
         return (posint);
     }
+
     public static int move(int x){
         int y = 0;  //TODO finish this method
         return(y);
@@ -75,8 +74,18 @@ public abstract class Piece {
     static void findPos(){
 
     }
-
-
+    public void setup(int x){
+        int y = x/10;
+        int z = x%10;
+        if (x > 50){
+            this.setColor(Color.WHITE);
+        } else {
+            this.setColor(Color.BLACK);
+        }
+        int position = x;
+        this.setMortality(Mortality.ALIVE);
+        b[y][z] = 1; //TODO figure this shit out
+    }
 
     public void setColor(Color color) {
         this.color = color;
