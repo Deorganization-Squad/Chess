@@ -18,7 +18,6 @@ class PieceTest {
 
     @org.junit.jupiter.api.Test
     void moveTest() {
-        assertEquals(0,Piece.move(0));
     }
 
     @org.junit.jupiter.api.Test
