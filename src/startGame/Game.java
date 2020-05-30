@@ -7,11 +7,9 @@ import java.util.Scanner.*;
 
 public class Game {
     public static void main(String[] args){
-        int [][] b = new int[7][7];
         Scanner console = new Scanner(System.in);
         System.out.println("would you like to start the game?");
         piecesSetup();
-        System.out.println(b);
     }
     public static void piecesSetup(){
                                             // Black Side

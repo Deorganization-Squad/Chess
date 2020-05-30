@@ -14,7 +14,7 @@ public abstract class Piece {
         BLACK
     }
 
-    public int[][] b = new int[8][8];
+    public static int[][] b = new int[8][8];
     public static String positionconv(int x) {
         int xten = x/ 10;
         String pos = "";
@@ -52,11 +52,6 @@ public abstract class Piece {
         return (posint);
     }
 
-    public static int move(int x){
-        int y = 0;  //TODO finish this method
-        return(y);
-    }
-
    /*static void createPosFile(){
         try{
             File posFile = new File("PiecesPos.txt");
@@ -74,6 +69,7 @@ public abstract class Piece {
     static void findPos(){
 
     }
+
     public void setup(int x){
         int y = x/10;
         int z = x%10;
