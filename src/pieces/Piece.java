@@ -80,7 +80,7 @@ public abstract class Piece {
         }
         int position = x;
         this.setMortality(Mortality.ALIVE);
-        b[y][z] = 1; //TODO figure this shit out
+        b[y][z] = 1; 
     }
 
     public void setColor(Color color) {
